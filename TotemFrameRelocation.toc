@@ -1,5 +1,5 @@
 ## Interface: 100105
 ## Title: Totem Frame Relocation
-## Notes: Changes the totem frame anchor
+## Notes: Relocates the totem frame
 ## Version: 1.0.0
 TotemFrameRelocation.lua

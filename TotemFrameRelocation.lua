@@ -1,9 +1,9 @@
-local ParentFrameName = "SUFUnitplayer"
-local ParentAnchorPosition = "BOTTOMRIGHT";
-local TotemFrameAnchorPosition = "TOPRIGHT";
-local useSquareMask = true;
-local xOffset = 7;
-local yOffset = 0;
+local ParentFrameName = "SUFUnitplayer" -- Name of the frame to which TotemFrame should be anchored.
+local ParentAnchorPosition = "BOTTOMRIGHT"; -- Anchor position of ParentFrame where TotemFrame should be anchored.
+local TotemFrameAnchorPosition = "TOPRIGHT"; -- Anchor position of TotemFrame to ParentFrame.
+local UseSquareMask = true; -- Use square mask for totem icons.
+local XOffset = 7; -- Horizontal offset of TotemFrame from ParentFrame.
+local YOffset = 0; -- Vertical offset of TotemFrame from ParentFrame.
 
 -- Create a frame to serve as the new parent for TotemFrame
 local IntermediateTotemFrame = CreateFrame("Frame", "IntermediateTotemFrame");
@@ -35,7 +35,7 @@ local function ReparentFrame(self)
 	local ParentFrame = _G[ParentFrameName]
 	self:SetParent(ParentFrame)
 	self:ClearAllPoints()
-	self:SetPoint(TotemFrameAnchorPosition, ParentFrame, ParentAnchorPosition, xOffset, yOffset)
+	self:SetPoint(TotemFrameAnchorPosition, ParentFrame, ParentAnchorPosition, XOffset, YOffset)
 end
 
 -- Function to re-parent TotemFrame
@@ -67,7 +67,7 @@ end
 -- Set the parent of TotemFrame to the intermediate frame
 TotemFrame:SetParent(IntermediateTotemFrame)
 
-if (useSquareMask) then
+if (UseSquareMask) then
 	-- Hook the OnLoad function to modify totem buttons
 	hooksecurefunc(TotemButtonMixin, "OnLoad", ModifyTotemButton);
 	-- Modify existing totem buttons
