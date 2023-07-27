@@ -1,9 +1,9 @@
-local ParentFrameName = "SUFUnitplayer" -- Name of the frame to which TotemFrame should be anchored.
-local ParentAnchorPosition = "BOTTOMRIGHT"; -- Anchor position of ParentFrame where TotemFrame should be anchored.
-local TotemFrameAnchorPosition = "TOPRIGHT"; -- Anchor position of TotemFrame to ParentFrame.
-local UseSquareMask = true; -- Use square mask for totem icons.
-local XOffset = 7; -- Horizontal offset of TotemFrame from ParentFrame.
-local YOffset = 0; -- Vertical offset of TotemFrame from ParentFrame.
+local ParentFrameName = "SUFUnitplayer" -- Frame for the TotemFrame to attach to.
+local ParentAnchorPosition = "BOTTOMRIGHT"; -- Attachment point on the parent frame.
+local TotemFrameAnchorPosition = "TOPRIGHT"; -- Attachment point on the TotemFrame.
+local UseSquareMask = true; -- Apply square mask to totem icons (true or false).
+local XOffset = 7; -- Horizontal offset from the attachment point.
+local YOffset = 0; -- Vertical offset from the attachment point.
 
 -- Create a frame to serve as the new parent for TotemFrame
 local IntermediateTotemFrame = CreateFrame("Frame", "IntermediateTotemFrame");
